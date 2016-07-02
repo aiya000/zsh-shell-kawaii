@@ -6,6 +6,8 @@ zsh-shell-kawaii show you her :)
 
 and Show fake username and hostname on your prompt.
 
+![example](example.png)
+
 
 ## Configurations
 * shell variables
@@ -29,7 +31,4 @@ export SHELL_KAWAII_FAKE_HOSTNAME='Arch'
 ```
 
 ### Result Prompt
-```console
-(*^-^)</aiya_000@Arch/ {pwd}$
-```
-with colors.
+![result](result.png)
