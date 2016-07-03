@@ -3,7 +3,7 @@
 # Set default values
 if [ -z "$SHELL_KAWAII_HER_VISIBILITY" ] ; then
 	# Kawaii visit on the prompt
-	export SHELL_KAWAII_SHE_VISIBILITY=0
+	export SHELL_KAWAII_HER_VISIBILITY=0
 fi
 
 if [ -z "$SHELL_KAWAII_FAKE_USERNAME" ] ; then
