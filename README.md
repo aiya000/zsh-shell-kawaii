@@ -8,6 +8,14 @@ and Show fake username and hostname on your prompt.
 
 ![example](example.png)
 
+## Install
+Example for use zplug.
+
+.zshrc
+```zsh
+zplug 'aiya000/zsh-shell-kawaii'
+```
+
 
 ## Configurations
 * shell variables
