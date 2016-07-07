@@ -18,5 +18,5 @@ fi
 # Show current directory
 kawaii_current_dir="%{$fg[yellow]%}%~%{$reset_color%}"
 
-# Apply Kawaii
-PS1="${kawaii_face} ${kawaii_current_dir}%(!.#.$)%{$reset_color%} "
+# Apply Kawaii Maid
+PROMPT="${kawaii_face} ${kawaii_current_dir}%(!.#.$)%{$reset_color%} "
