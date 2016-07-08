@@ -4,7 +4,7 @@
 source $(dirname $0)/init.zsh
 
 # Define Kawaii Maid with exit statuses
-kawaii_maid="%(?.%{${fg_bold[green]}%}.%{${fg_bold[blue]}%})%(?!(*^-^)!(*~_~%))%{${reset_color}%}"
+kawaii_maid="%(?.%{${fg_bold[green]}%}.%{${fg_bold[blue]}%})%(?!(*^-^)!(;^-^%))%{${reset_color}%}"
 
 # Set fake host name
 if [ $SHELL_KAWAII_HOST_VISIBILITY -eq 1 ] ; then
