@@ -23,6 +23,11 @@ if [ -z "$SHELL_KAWAII_HOST_VISIBILITY" ] ; then
 fi
 
 if [ -z "$SHELL_KAWAII_CLI_TO_LOW" ] ; then
-	# default: 0, value: 0 or 1
+	# default:0, value:0 or 1
 	export SHELL_KAWAII_CLI_TO_LOW=0
+fi
+
+if [ -z "$SHELL_KAWAII_USER_DELIMITER" ] ; then
+	# default:'$', value:string
+	export SHELL_KAWAII_USER_DELIMITER='$'
 fi
