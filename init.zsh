@@ -8,13 +8,13 @@ if [ -z "$SHELL_KAWAII_HER_VISIBILITY" ] ; then
 fi
 
 if [ -z "$SHELL_KAWAII_FAKE_USERNAME" ] ; then
-	# default:$USER, valid:string
-	export SHELL_KAWAII_FAKE_USERNAME=$USER
+	# default:$(whoami), valid:string
+	export SHELL_KAWAII_FAKE_USERNAME=$(whoami)
 fi
 
 if [ -z "$SHELL_KAWAII_FAKE_HOSTNAME" ] ; then
-	# default:$HOSTNAME, valid:string
-	export SHELL_KAWAII_FAKE_HOSTNAME=$HOSTNAME
+	# default:$(hostname), valid:string
+	export SHELL_KAWAII_FAKE_HOSTNAME=$(hostname)
 fi
 
 if [ -z "$SHELL_KAWAII_HOST_VISIBILITY" ] ; then
