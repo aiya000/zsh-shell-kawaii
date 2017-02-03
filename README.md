@@ -1,8 +1,8 @@
 # zsh-shell-kawaii
 
 ## About
-The tool of `$PROMPT`.  
-You can define `$PROMPT` with (or without) her :+1:
+The tool of `$PROMPT` :+1:  
+You can define `$PROMPT` with (or without) her **easily** !
 
 She is ↓  
 ![her feature](her_feature.png)
