@@ -2,6 +2,7 @@
 
 # Initialize confirations
 source $(dirname $0)/init.zsh
+add-zsh-hook precmd build_prompt
 
 build_prompt () {
 	# Define Kawaii Maid with exit statuses
@@ -32,5 +33,3 @@ ${delim_pattern} "
 		export PROMPT="${face} ${current_dir}${delim_pattern}%{$reset_color%} "
 	fi
 }
-
-build_prompt
