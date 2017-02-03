@@ -21,14 +21,15 @@ build_prompt () {
 
 	# Show current directory
 	local current_dir="%{$fg[yellow]%}%~%{$reset_color%}"
+	local delim_pattern="%{$fg[cyan]%}%(!.#.${SHELL_KAWAII_USER_DELIMITER})%{$reset_color%}"
 
 	# Apply Kawaii Maid
 	if [ "$SHELL_KAWAII_CLI_TO_LOW" -eq 1 ] ; then
 		#FIXME: How can I set the linebreak without this notation ?
 		export PROMPT="${face} ${current_dir}%{$reset_color%}
-%(!.#.$) "
+${delim_pattern} "
 	else
-		export PROMPT="${face} ${current_dir}%(!.#.$)%{$reset_color%} "
+		export PROMPT="${face} ${current_dir}${delim_pattern}%{$reset_color%} "
 	fi
 }
 
