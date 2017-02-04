@@ -40,6 +40,12 @@ zplug 'aiya000/zsh-shell-kawaii'
 + `$SHELL_KAWAII_USER_DELIMITER`
     - default value (string): '$'
     - Show before CLI
++ `$SHELL_KAWAII_MORE_PROMPT_COMMAND`
+    - default value (comnand or function): 'echo ""'
+    - Insert the result to after $PROMPT or $RPROMPT
+        - Please see an example
+        - [.zprofile](https://github.com/aiya000/dotfiles/blob/2d14203d56a91c3ac4b12c67a06e2009f20bc740/.zsh/.zprofile#L78)
+        - [.zshrc](https://github.com/aiya000/dotfiles/blob/2d14203d56a91c3ac4b12c67a06e2009f20bc740/.zsh/.zshrc#L184)
 
 
 ## Setting example
