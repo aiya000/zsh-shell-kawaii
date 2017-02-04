@@ -2,7 +2,6 @@
 
 # Initialize confirations
 source $(dirname $0)/init.zsh
-add-zsh-hook precmd build_prompt
 
 build_prompt () {
 	# Define the variable. It looks like 'john@ArchLinux' or 'john'
@@ -31,4 +30,12 @@ ${delim_pattern} "
 	else
 		export PROMPT="${feature} ${current_dir}${delim_pattern}%{$reset_color%} "
 	fi
+}
+
+# Initialize $PROMPT
+build_prompt
+
+# Redraw $PROMPT when input was caught or keymap was changed
+function zle-line-init zle-keymap-select {
+	build_prompt
 }
