@@ -25,9 +25,10 @@ build_prompt () {
 	# Apply result
 	if [ "$SHELL_KAWAII_CLI_TO_LOW" -eq 1 ] ; then
 		#FIXME: How can I set the linebreak without this notation ?
-		export PROMPT="${feature} ${current_dir}%{$reset_color%}
+		export PROMPT="${feature} ${current_dir}%{$reset_color%}$(eval "$SHELL_KAWAII_MORE_PROMPT_COMMAND")
 ${delim_pattern} "
 	else
+		export RPROMPT="$(eval "$SHELL_KAWAII_MORE_PROMPT_COMMAND")"
 		export PROMPT="${feature} ${current_dir}${delim_pattern}%{$reset_color%} "
 	fi
 }
@@ -38,4 +39,5 @@ build_prompt
 # Redraw $PROMPT when input was caught or keymap was changed
 function zle-line-init zle-keymap-select {
 	build_prompt
+	zle reset-prompt
 }
