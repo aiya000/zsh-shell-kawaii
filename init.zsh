@@ -1,6 +1,9 @@
 #!/usr/bin/env zsh
 # Define the variables with the default value
 
+zle -N zle-line-init
+zle -N zle-keymap-select
+
 # Kawaii visit on the prompt
 if [ -z "$SHELL_KAWAII_HER_VISIBILITY" ] ; then
 	# default:0, valid:0 or 1
@@ -30,4 +33,8 @@ fi
 if [ -z "$SHELL_KAWAII_USER_DELIMITER" ] ; then
 	# default:'$', value:string
 	export SHELL_KAWAII_USER_DELIMITER='$'
+fi
+
+if [ -z "$SHELL_KAWAII_MORE_PROMPT_COMMAND" ] ; then
+	export SHELL_KAWAII_MORE_PROMPT_COMMAND='echo ""'
 fi
