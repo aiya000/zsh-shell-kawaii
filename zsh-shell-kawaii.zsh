@@ -3,7 +3,7 @@
 # Initialize confirations
 source $(dirname $0)/init.zsh
 
-build_prompt () {
+shell_kawaii_build_prompt () {
 	# Define the variable. It looks like 'john@ArchLinux' or 'john'
 	local user_env="%{$fg[yellow]%}${SHELL_KAWAII_FAKE_USERNAME}%{$fg[green]%}"
 	if [ "$SHELL_KAWAII_HOST_VISIBILITY" -eq 1 ] ; then
@@ -34,12 +34,12 @@ ${delim_pattern} "
 }
 
 # Initialize $PROMPT
-build_prompt
+shell_kawaii_build_prompt
 
 # Redraw $PROMPT when input was caught or keymap was changed
 if [ "$SHELL_KAWAII_AUTO_SET_ZLE_WIDGETS" -eq 1 ] ; then
 	function zle-line-init zle-keymap-select {
-		build_prompt
+		shell_kawaii_build_prompt
 		zle reset-prompt
 	}
 	zle -N zle-line-init
