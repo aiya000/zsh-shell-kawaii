@@ -48,6 +48,9 @@ zplug 'aiya000/zsh-shell-kawaii'
         - Please see an example
         - [.zprofile](https://github.com/aiya000/dotfiles/blob/2d14203d56a91c3ac4b12c67a06e2009f20bc740/.zsh/.zprofile#L78)
         - [.zshrc](https://github.com/aiya000/dotfiles/blob/2d14203d56a91c3ac4b12c67a06e2009f20bc740/.zsh/.zshrc#L184)
++ `$SHELL_KAWAII_AUTO_SET_ZLE_WIDGETS`
+    - default value (bool): 1
+    - This should be set to 0 if you want to define `zle-line-init` and `zle-keymap-select` yourself
 
 
 ## Setting example

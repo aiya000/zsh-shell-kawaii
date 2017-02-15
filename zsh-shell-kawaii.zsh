@@ -37,7 +37,11 @@ ${delim_pattern} "
 build_prompt
 
 # Redraw $PROMPT when input was caught or keymap was changed
-function zle-line-init zle-keymap-select {
-	build_prompt
-	zle reset-prompt
-}
+if [ "$SHELL_KAWAII_AUTO_SET_ZLE_WIDGETS" -eq 1 ] ; then
+	function zle-line-init zle-keymap-select {
+		build_prompt
+		zle reset-prompt
+	}
+	zle -N zle-line-init
+	zle -N zle-keymap-select
+fi
